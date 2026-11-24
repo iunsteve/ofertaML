@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffe600">
+<meta name="description" content="Oferta ML ayuda a comparar publicaciones del mismo producto en Mercado Libre Colombia para encontrar mejores opciones de compra.">
+<title>Oferta ML | Encuentra una mejor oferta</title>
+<style>
+:root{--yellow:#ffe600;--ink:#18212c;--muted:#647080;--line:#e8ebef;--soft:#f6f7f9;--green:#167647;--blue:#245eea}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+header{height:72px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:20px;font-weight:900;letter-spacing:-.04em}.logo{width:38px;height:38px;border-radius:11px;background:var(--yellow);display:grid;place-items:center;font-size:22px;font-weight:950}
+nav{display:flex;gap:25px;align-items:center;font-size:13px;font-weight:700;color:#4d5866}nav a{text-decoration:none}nav a:hover{color:#000}
+.hero{padding:75px 0 70px;background:linear-gradient(180deg,#fff 65%,#fffdf0)}.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #eee4a2;background:#fffce2;border-radius:99px;padding:7px 12px;font-size:11px;font-weight:850;letter-spacing:.04em;text-transform:uppercase;color:#65580b}
+.dot{height:7px;width:7px;border-radius:50%;background:#c5a900}
+h1{font-size:clamp(42px,5.5vw,66px);line-height:1.02;letter-spacing:-.065em;margin:20px 0 18px}h1 em{font-style:normal;background:linear-gradient(transparent 68%,var(--yellow) 68%)}
+.lead{font-size:17px;color:#5c6775;max-width:570px;margin:0 0 24px}.actions{display:flex;gap:11px;flex-wrap:wrap}.btn{padding:12px 16px;border-radius:10px;background:var(--ink);color:white;text-decoration:none;font-size:13px;font-weight:800}.btn.alt{background:white;color:var(--ink);border:1px solid var(--line)}.micro{font-size:11px;color:#7d8793;margin-top:14px}
+.visual{background:#f5f6f8;padding:21px;border-radius:22px;position:relative}.visual:before{content:"";position:absolute;inset:0 12% 18% 12%;background:#fff3a1;filter:blur(40px);z-index:0}.panel{position:relative;background:white;border:1px solid #e6e9ed;border-radius:17px;overflow:hidden;box-shadow:0 18px 50px #17202b18}
+.panel-head{background:var(--yellow);padding:14px 17px;display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:14px}.panel-head small{font-size:9px;color:#555;font-weight:800}
+.panel-body{padding:16px;background:#f8f9fb}.caption{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:#78818d;font-weight:900}
+.product{background:white;border:1px solid var(--line);border-radius:11px;padding:12px;display:flex;gap:12px;margin:8px 0 14px;align-items:center}.product-icon{width:48px;height:48px;border-radius:9px;background:#f0f2f5;display:grid;place-items:center;font-size:22px}.product b{font-size:11px}.product small{display:block;font-size:9px;color:#7e8792;margin-top:3px}
+.switch{display:flex;background:#e9edf2;padding:3px;border-radius:8px;margin:8px 0}.switch span{flex:1;text-align:center;padding:7px 3px;border-radius:6px;font-size:9px;font-weight:850;color:#657080}.switch .selected{background:white;color:#1e56d4;box-shadow:0 1px 3px #0001}
+.offer{display:grid;grid-template-columns:30px 1fr auto;gap:9px;align-items:center;background:white;border:1px solid var(--line);border-radius:9px;padding:9px;margin-top:7px}.avatar{height:29px;width:29px;border-radius:8px;background:#edf1f5;display:grid;place-items:center;font-size:12px;font-weight:900}.offer b{font-size:9px;display:block}.offer small{font-size:8px;color:#7d8792;display:block}.price{font-size:10px;font-weight:900;text-align:right}.price small{font-size:8px;font-weight:500}
+.disclaimer{font-size:8px;color:#8a929c;text-align:center;padding-top:10px}
+section{padding:72px 0}.soft{background:var(--soft)}.heading{text-align:center;max-width:690px;margin:0 auto 34px}.kicker{text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:900;color:#8a7600}.heading h2,.privacy h2{font-size:clamp(29px,3vw,39px);line-height:1.1;letter-spacing:-.045em;margin:10px 0}.heading p{font-size:14px;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:21px}.ico{height:36px;width:36px;border-radius:10px;background:#fff4a2;display:grid;place-items:center;font-size:18px;margin-bottom:14px}.card h3{font-size:14px;margin:0 0 6px}.card p{font-size:12px;color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}.num{height:29px;width:29px;border-radius:8px;background:var(--ink);color:white;display:grid;place-items:center;font-weight:900;font-size:11px;margin-bottom:14px}.step h3{font-size:14px;margin:0 0 6px}.step p{font-size:12px;color:var(--muted);margin:0}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:840px;margin:18px auto 0}.mode{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}.mode small{color:#8a7600;text-transform:uppercase;letter-spacing:.1em;font-weight:900;font-size:9px}.mode h3{font-size:18px;margin:7px 0}.mode p{font-size:12px;color:var(--muted);margin:0}
+.privacy{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}.privacy-lead{font-size:13px;color:var(--muted)}.privacy-list{display:grid;gap:13px}.privacy-item{display:flex;gap:11px;border-bottom:1px solid var(--line);padding-bottom:12px}.check{height:22px;width:22px;flex:0 0 auto;background:#e8f6ed;color:var(--green);border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:900}.privacy-item b{display:block;font-size:12px}.privacy-item span{display:block;color:var(--muted);font-size:11px;margin-top:2px}.notice{margin-top:22px;padding:13px 15px;border:1px solid #eee4a2;background:#fffbea;border-radius:10px;font-size:11px;color:#665d25}
+footer{background:var(--ink);color:white;padding:26px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot small{max-width:650px;text-align:right;color:#b9c1ca;font-size:10px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:30px}.grid{grid-template-columns:1fr 1fr}.privacy{grid-template-columns:1fr;gap:18px}}
+@media(max-width:560px){.wrap{width:calc(100% - 28px)}header{height:62px}nav{gap:12px}nav a:not(.nav-cta){display:none}.hero{padding:48px 0}.lead{font-size:15px}.visual{padding:12px}.grid,.steps,.modes{grid-template-columns:1fr}section{padding:55px 0}.foot{align-items:flex-start;flex-direction:column}.foot small{text-align:left}}
+</style>
+</head>
+<body>
+<header class="wrap">
+<a class="brand" href="#inicio"><span class="logo">O</span>Oferta ML</a>
+<nav aria-label="Navegación"><a href="#funciones">Funciones</a><a href="#uso">Cómo funciona</a><a href="#privacidad">Privacidad</a></nav>
+</header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div><div class="pill"><span class="dot"></span> Comparador para Mercado Libre Colombia</div>
+<h1>Encuentra una mejor oferta del <em>mismo producto.</em></h1>
+<p class="lead">Compara publicaciones de un mismo artículo, revisa el precio y conoce mejor al vendedor. Todo desde una extensión para Chrome pensada para facilitar tu decisión de compra.</p>
+<div class="actions"><a class="btn" href="#uso">Conocer cómo funciona</a><a class="btn alt" href="#funciones">Ver funcionalidades</a></div>
+<p class="micro">Proyecto independiente · Extensión en etapa de prueba · Sin cuenta propia</p></div>
+<div class="visual" aria-label="Ilustración de la interfaz de Oferta ML"><div class="panel">
+<div class="panel-head"><span>🛍 Oferta ML</span><small>MERCADO LIBRE COLOMBIA</small></div><div class="panel-body">
+<div class="caption">Producto detectado</div><div class="product"><div class="product-icon">▣</div><div><b>Producto que estás consultando</b><small>Título, publicación y características identificadas</small></div></div>
+<div class="caption">Ordenar resultados</div><div class="switch"><span class="selected">Menor precio</span><span>Balance inteligente</span></div>
+<div class="offer"><div class="avatar">1</div><div><b>Publicación del mismo producto</b><small>Vendedor · Reputación disponible</small></div><div class="price">Precio + envío<small>si se verifica</small></div></div>
+<div class="offer"><div class="avatar">2</div><div><b>Otra publicación compatible</b><small>Condición y disponibilidad</small></div><div class="price">Comparar<small>costo total</small></div></div>
+<div class="disclaimer">Ilustración de ejemplo; no representa ofertas ni precios reales.</div>
+</div></div></div>
+</div></section>
+<section id="funciones"><div class="wrap"><div class="heading"><div class="kicker">¿Qué hace Oferta ML?</div><h2>Compara con más contexto y menos esfuerzo.</h2><p>Parte del producto que ya estás viendo y encuentra alternativas para ese mismo artículo, sin revisar manualmente decenas de publicaciones.</p></div>
+<div class="grid">
+<article class="card"><div class="ico">⌕</div><h3>Reconoce el producto</h3><p>Lee los datos disponibles de la publicación abierta. También permite pegar un enlace o escribir el nombre del producto.</p></article>
+<article class="card"><div class="ico">⇄</div><h3>Compara publicaciones</h3><p>Busca alternativas y filtra resultados que parecen accesorios, repuestos o versiones diferentes.</p></article>
+<article class="card"><div class="ico">↕</div><h3>Dos formas de ordenar</h3><p>Prioriza el precio más bajo o usa un balance orientativo entre precio y datos disponibles del vendedor.</p></article>
+<article class="card"><div class="ico">✓</div><h3>Revisa condición y stock</h3><p>Excluye por defecto productos usados, publicaciones inactivas o sin inventario, según los datos recibidos.</p></article>
+<article class="card"><div class="ico">▤</div><h3>Considera el envío</h3><p>Cuando se proporciona una ciudad y Mercado Libre devuelve una cotización, incorpora el envío al costo comparado.</p></article>
+<article class="card"><div class="ico">⚙</div><h3>Se adapta a tu búsqueda</h3><p>Puedes activar la inclusión de usados y ajustar el peso del precio frente a la información del vendedor.</p></article>
+</div></div></section>
+<section class="soft" id="uso"><div class="wrap"><div class="heading"><div class="kicker">Uso sencillo</div><h2>¿Cómo funciona?</h2><p>La extensión acompaña tu búsqueda desde Chrome y consulta los datos necesarios directamente en los servicios de Mercado Libre.</p></div>
+<div class="steps"><article class="step"><div class="num">1</div><h3>Abre o indica el producto</h3><p>Visita una publicación, pega su enlace en Oferta ML o escribe el nombre del producto que deseas encontrar.</p></article><article class="step"><div class="num">2</div><h3>Compara alternativas</h3><p>La extensión consulta publicaciones relacionadas y aplica filtros de coincidencia, condición, estado y disponibilidad.</p></article><article class="step"><div class="num">3</div><h3>Elige cómo ordenar</h3><p>Revisa primero el menor precio o cambia al balance inteligente para considerar también la información del vendedor.</p></article></div>
+<div class="modes"><article class="mode"><small>Modo 01</small><h3>Menor precio</h3><p>Ordena por costo total cuando el precio y el envío pueden verificarse. Advierte si hay señales de riesgo o faltan datos del vendedor.</p></article><article class="mode"><small>Modo 02</small><h3>Balance inteligente</h3><p>Combina precio y reputación disponible para ofrecer un orden orientativo. Puedes ajustar cuánto pesa el ahorro frente a la seguridad.</p></article></div>
+</div></section>
+<section id="privacidad"><div class="wrap privacy"><div><div class="kicker">Privacidad y transparencia</div><h2>Tu búsqueda se procesa desde tu navegador.</h2><p class="privacy-lead">Oferta ML no utiliza un servidor propio para recibir búsquedas ni servicios de analítica de terceros. La extensión consulta directamente la API de Mercado Libre para obtener la información necesaria.</p></div>
+<div class="privacy-list">
+<div class="privacy-item"><div class="check">✓</div><div><b>Sin cuenta propia de Oferta ML</b><span>No necesitas registrarte ni crear un perfil en esta herramienta.</span></div></div>
+<div class="privacy-item"><div class="check">✓</div><div><b>Almacenamiento local</b><span>La configuración y los datos de autenticación se guardan en el almacenamiento de Chrome.</span></div></div>
+<div class="privacy-item"><div class="check">✓</div><div><b>Consultas directas a Mercado Libre</b><span>Los términos, identificadores y el token de autorización necesarios se envían a Mercado Libre. La ciudad de destino también se envía al cotizar el envío.</span></div></div>
+<div class="privacy-item"><div class="check">✓</div><div><b>Sin historial general de navegación</b><span>La extensión lee los datos de la publicación de Mercado Libre para identificar el producto; no recopila el historial general de navegación.</span></div></div>
+<div class="privacy-item"><div class="check">✓</div><div><b>Sin enlaces de afiliado</b><span>Esta versión de prueba no incorpora enlaces de afiliado ni recibe comisiones por compras.</span></div></div>
+</div></div>
+<div class="wrap"><div class="notice"><b>Importante:</b> las ofertas, el inventario, los costos de envío y los datos de reputación dependen de la información que Mercado Libre permita consultar y entregue en cada momento. El balance inteligente es un cálculo orientativo de Oferta ML, no una calificación oficial de Mercado Libre.</div></div>
+</section>
+</main>
+<footer><div class="wrap foot"><b>🟨 Oferta ML</b><small>Oferta ML es un proyecto independiente y no está afiliado, patrocinado ni respaldado por Mercado Libre. Mercado Libre es una marca de sus respectivos titulares.</small></div></footer>
+</body></html>
